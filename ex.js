@@ -9,7 +9,7 @@ const extractedData = [];
 fs.createReadStream(inputFile)
   .pipe(csv({ separator: "," }))
   .on("data", (row) => {
-    const extractedValue = Object.values(row)[3]; // Thay 'n' bằng chỉ mục của cột cần trích xuất
+    const extractedValue = Object.values(row)[n]; // Thay 'n' bằng chỉ mục của cột cần trích xuất
     extractedData.push(extractedValue);
   })
   .on("end", () => {
